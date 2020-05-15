@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/zt-zhang/MSD-Project.git", :tag => s.version }
 
   s.source_files  = "MSDProject/**/*.{h,m,swift}"
+  s.requires_arc = true
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
