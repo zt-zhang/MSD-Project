@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   s.dependency 'SnapKit'
   s.dependency 'IQKeyboardManagerSwift'
   s.dependency 'QMUIKit'
-  s.dependency 'swiftScan'
+  #s.dependency 'swiftScan'
   s.dependency 'TYPagerController'
   s.dependency 'FSPagerView'
   s.dependency 'Kingfisher'
