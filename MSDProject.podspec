@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/zt-zhang/MSD-Project.git", :tag => s.version }
   s.source_files = "MSDProject/MSDBaseTools/**/*.swift"
   s.resources = ["MSDProject/MSDBaseTools/Resource/*.bundle"]
-  s.framework    = "UIKit","Foundation", "swiftScan"
+  s.framework    = "UIKit","Foundation"
   s.requires_arc = true
 
   # UI相关
