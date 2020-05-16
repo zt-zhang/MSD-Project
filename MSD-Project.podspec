@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "MSD-Project"
+  s.name         = "MSDProject"
   s.version      = "0.0.1"
   s.summary      = "敏思达项目通用框架"
 
@@ -16,12 +16,14 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/zt-zhang/MSD-Project.git", :tag => s.version }
   s.source_files = "MSDProject/MSDBaseTools/**/*.swift"
   s.resources = ["MSDProject/MSDBaseTools/Resource/*.bundle"]
+  s.framework    = "UIKit","Foundation", "swiftScan"
+  s.requires_arc = true
 
   # UI相关
   s.dependency 'SnapKit'
   s.dependency 'IQKeyboardManagerSwift'
   s.dependency 'QMUIKit'
-  #s.dependency 'swiftScan', '~> 1.2.0'
+  #s.dependency 'swiftScan', '~> 1.2.0' #私有库
   s.dependency 'TYPagerController'
   s.dependency 'FSPagerView'
   s.dependency 'Kingfisher'
