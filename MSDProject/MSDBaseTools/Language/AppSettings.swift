@@ -14,20 +14,34 @@ class AppSettings: NSObject {
 
     static let shared: AppSettings = {
         let appSettings: AppSettings
-        if let savedData = UserDefaults.standard.object(forKey: AppSettings.kSharedSettingsKey) as? Data,
-            let defaultSettings = try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [AppSettings.self], from: savedData) {
-            
-            appSettings = defaultSettings as! AppSettings
+        if #available(iOS 11.0, *) {
+            if let savedData = UserDefaults.standard.object(forKey: AppSettings.kSharedSettingsKey) as? Data,
+                let defaultSettings = try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [AppSettings.self], from: savedData) {
+                appSettings = defaultSettings as! AppSettings
+            } else {
+                appSettings = AppSettings()
+            }
         } else {
-            appSettings = AppSettings()
+            if let savedData = UserDefaults.standard.object(forKey: AppSettings.kSharedSettingsKey) as? Data,
+                let defaultSettings = NSKeyedUnarchiver.unarchiveObject(with: savedData) {
+                appSettings = defaultSettings as! AppSettings
+            } else {
+                appSettings = AppSettings()
+            }
         }
 
         return appSettings
     }()
 
     static func saveSharedInstance() {
-        let data = try? NSKeyedArchiver.archivedData(withRootObject: AppSettings.shared, requiringSecureCoding: true)
-        UserDefaults.standard.set(data, forKey: AppSettings.kSharedSettingsKey)
+        if #available(iOS 11.0, *) {
+            let data = try? NSKeyedArchiver.archivedData(withRootObject: AppSettings.shared, requiringSecureCoding: true)
+            UserDefaults.standard.set(data, forKey: AppSettings.kSharedSettingsKey)
+        } else {
+            let data = NSKeyedArchiver.archivedData(withRootObject: AppSettings.shared)
+            UserDefaults.standard.set(data, forKey: AppSettings.kSharedSettingsKey)
+        }
+        
     }
 
     enum Language: String {
