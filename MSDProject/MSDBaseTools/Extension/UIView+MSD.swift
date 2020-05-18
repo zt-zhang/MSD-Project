@@ -9,66 +9,66 @@
 import UIKit
 
 extension UIView {
-    func bottomBorder(color: UIColor) {
+    public func bottomBorder(color: UIColor) {
         self.border(color: color, position: .bottom)
     }
-    func leftBorder(color: UIColor) {
+    public func leftBorder(color: UIColor) {
         self.border(color: color, position: .left)
     }
-    func rightBorder(color: UIColor) {
+    public func rightBorder(color: UIColor) {
         self.border(color: color, position: .right)
     }
-    func topBorder(color: UIColor) {
+    public func topBorder(color: UIColor) {
         self.border(color: color, position: .top)
     }
-    func allBorder(color: UIColor) {
+    public func allBorder(color: UIColor) {
         self.border(color: color, position: [.bottom, .top, .left, .right])
     }
     
     /// 加边框
-    func border(color: UIColor, position: QMUIViewBorderPosition) {
+    public func border(color: UIColor, position: QMUIViewBorderPosition) {
         self.qmui_borderColor = color
         self.qmui_borderWidth = 0.5
         self.qmui_borderLocation = .inside
         self.qmui_borderPosition = position
     }
     /// 去边框
-    func clearBorder() {
+    public func clearBorder() {
         self.qmui_borderWidth = 0
     }
     
     /// 加圆角
-    func cornerRadius(_ radius: CGFloat) {
+    public func cornerRadius(_ radius: CGFloat) {
         self.cornerRadius(radius, corners: [.layerMaxXMaxYCorner,
                                             .layerMaxXMaxYCorner,
                                             .layerMinXMinYCorner,
                                             .layerMinXMaxYCorner])
     }
-    func cornerRadius(_ radius: CGFloat, corners: QMUICornerMask) {
+    public func cornerRadius(_ radius: CGFloat, corners: QMUICornerMask) {
         self.layer.cornerRadius = radius
         self.layer.qmui_maskedCorners = corners
     }
     /// 去圆角
-    func clearCorner() {
+    public func clearCorner() {
         self.layer.cornerRadius = 0
     }
     
     /// 加阴影
-    func shadow(color: UIColor) {
+    public func shadow(color: UIColor) {
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
         self.layer.shadowRadius = 3
         self.layer.shadowOpacity = 1
     }
     /// 去阴影
-    func clearShadow() {
+    public func clearShadow() {
         self.layer.shadowColor = nil
     }
 }
 
 extension UIView {
     
-    var x:CGFloat{
+    public var x:CGFloat{
         get{
             return self.frame.origin.x
         } set{
@@ -76,7 +76,7 @@ extension UIView {
         }
     }
     
-    var y:CGFloat{
+    public var y:CGFloat{
         get{
             return self.frame.origin.y
         }set{
@@ -84,7 +84,7 @@ extension UIView {
         }
     }
     
-    var centerX:CGFloat{
+    public var centerX:CGFloat{
         get{
             return self.center.x
         }set{
@@ -92,7 +92,7 @@ extension UIView {
         }
     }
     
-    var centerY:CGFloat{
+    public var centerY:CGFloat{
         get{
             return self.center.y
         }set{
@@ -100,7 +100,7 @@ extension UIView {
         }
     }
     
-    var width:CGFloat{
+    public var width:CGFloat{
         get{
             return self.frame.size.width
         }set{
@@ -108,14 +108,14 @@ extension UIView {
         }
     }
     
-    var height:CGFloat{
+    public var height:CGFloat{
         get{
             return self.frame.size.height
         }set{
             self.frame.size.height = newValue
         }
     }
-    var size:CGSize{
+    public var size:CGSize{
         get{
             return self.frame.size
         }set{
@@ -123,7 +123,7 @@ extension UIView {
         }
     }
     
-    var origin:CGPoint{
+    public var origin:CGPoint{
         get{
             return self.frame.origin
         }set{

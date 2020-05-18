@@ -9,8 +9,8 @@
 import Foundation
 import Moya
 
-class MSDNetWork {
-    static func request<MSDTarget: MSDTargetTypeLink&TargetType>(target: MSDTarget) -> Observable<MSDTarget.LinkResult> {
+public class MSDNetWork {
+    public static func request<MSDTarget: MSDTargetTypeLink&TargetType>(target: MSDTarget) -> Observable<MSDTarget.LinkResult> {
         return Observable<MSDTarget.LinkResult>.create { maybe in
             
             let provider = MoyaProvider<MSDTarget>(plugins: [MSDNetWorkPlugin()])

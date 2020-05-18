@@ -33,7 +33,7 @@ class AppSettings: NSObject {
         return appSettings
     }()
 
-    static func saveSharedInstance() {
+    public static func saveSharedInstance() {
         if #available(iOS 11.0, *) {
             let data = try? NSKeyedArchiver.archivedData(withRootObject: AppSettings.shared, requiringSecureCoding: true)
             UserDefaults.standard.set(data, forKey: AppSettings.kSharedSettingsKey)
@@ -54,7 +54,7 @@ class AppSettings: NSObject {
     }
     
     /// 判断手机语言是不是中文
-    static func localeIsChinese() -> Bool {
+    public static func localeIsChinese() -> Bool {
         if let lang = Locale.preferredLanguages.first {
             return lang.hasPrefix("zh") ? true : false ;
         } else {

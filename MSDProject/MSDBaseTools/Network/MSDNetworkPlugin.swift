@@ -9,12 +9,12 @@
 import Foundation
 import Moya
 
-class MSDNetWorkPlugin: PluginType {
-    func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+public class MSDNetWorkPlugin: PluginType {
+    public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
         
         return request
     }
-    func willSend(_ request: RequestType, target: TargetType) {
+    public func willSend(_ request: RequestType, target: TargetType) {
         
     }
     func didReceive(_ result: Result<Moya.Response, MoyaError>, target: TargetType) {

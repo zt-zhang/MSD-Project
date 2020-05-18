@@ -9,10 +9,10 @@
 import UIKit
 
 /// 选择按钮
-class MSDRadioButton: QMUIButton {
+public class MSDRadioButton: QMUIButton {
     let disposeBag = DisposeBag()
     
-    static func image(normal: UIImage, selected: UIImage) -> MSDRadioButton {
+    public static func image(normal: UIImage, selected: UIImage) -> MSDRadioButton {
         let btn = MSDRadioButton()
         btn.setImage(normal, for: .normal)
         btn.setImage(selected, for: .selected)
@@ -20,7 +20,7 @@ class MSDRadioButton: QMUIButton {
         return btn
     }
     
-    static func imageName(normal: String, selected: String) -> MSDRadioButton {
+    public static func imageName(normal: String, selected: String) -> MSDRadioButton {
         let btn = MSDRadioButton()
         let image1 = UIImage(named: normal)
         let image2 = UIImage(named: selected)

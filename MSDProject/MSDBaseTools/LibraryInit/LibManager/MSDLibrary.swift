@@ -12,8 +12,8 @@ import DoraemonKit
 import CocoaLumberjack
 import SwiftyUserDefaults
 
-class MSDLibrary {
-    static func initLib() {
+public class MSDLibrary {
+    public static func initLib() {
         // 配置键盘
         let manager = IQKeyboardManager.shared
         manager.enable = true

@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 @IBDesignable
-class MSDWebView: UIView {
+public class MSDWebView: UIView {
     
     /// 事件
     fileprivate var target: AnyObject?
@@ -192,7 +192,7 @@ class MSDWebView: UIView {
 // MARK: - WKScriptMessageHandler
 extension MSDWebView: WKScriptMessageHandler{
     
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if let scriptMessage = webConfig?.scriptMessageHandlerArray {
             self.delegate?.webViewUserContentController(scriptMessage, didReceive: message)
         }
@@ -202,7 +202,7 @@ extension MSDWebView: WKScriptMessageHandler{
 extension MSDWebView: WKNavigationDelegate{
     
     //服务器开始请求的时候调用
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         self.delegate?.webView(webView, decidePolicyFor: navigationAction, decisionHandler: decisionHandler)
         
         let navigationURL = navigationAction.request.url?.absoluteString
@@ -261,12 +261,12 @@ extension MSDWebView: WKNavigationDelegate{
     }
     
     //开始加载
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         self.delegate?.webView(webView, didStartProvisionalNavigation: navigation)
     }
     
     //这个是网页加载完成，导航的变化
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.delegate?.webView(webView, didFinish: navigation)
         // 判断是否需要加载（仅在第一次加载）
         if needLoadJSPOST == true {
@@ -278,19 +278,19 @@ extension MSDWebView: WKNavigationDelegate{
     }
     
     //跳转失败的时候调用
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         self.delegate?.webView(webView, didFail: navigation, withError: error)
         print(error)
     }
     // 内容加载失败时候调用
-    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         self.delegate?.webView(webView, didFailProvisionalNavigation: navigation, withError: error)
         progressView.isHidden = true
         print(error)
     }
     
     // 打开新窗口委托
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+    public func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         if navigationAction.targetFrame?.isMainFrame == nil {
             webView.load(navigationAction.request)
         }
@@ -302,7 +302,7 @@ extension MSDWebView: WKNavigationDelegate{
 extension MSDWebView: WKUIDelegate{
     
     // 获取js 里面的提示
-    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+    public func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         
         let alert = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) -> Void in
@@ -315,7 +315,7 @@ extension MSDWebView: WKUIDelegate{
     }
     
     // js 信息的交流
-    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+    public func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
         
         let alert = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) -> Void in
@@ -328,7 +328,7 @@ extension MSDWebView: WKUIDelegate{
     }
     
     // 交互。可输入的文本。
-    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+    public func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
         
         let alert = UIAlertController(title: prompt, message: defaultText, preferredStyle: .alert)
         

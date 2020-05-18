@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIButton {
-    func title(_ title: String, _ font: UIFont, _ textColor: UIColor, _ color: UIColor) {
+    public func title(_ title: String, _ font: UIFont, _ textColor: UIColor, _ color: UIColor) {
         self.titleLabel?.font = font
         self.setTitle(title, for: .normal)
         self.setTitleColor(textColor, for: .normal)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MSDColor {
+public class MSDColor {
     static let hex_000000 = UIColor.qmui_color(withHexString: "#000000")!
     static let hex_FFFFFF = UIColor.qmui_color(withHexString: "#FFFFFF")!
     static let hex_26AAFE = UIColor.qmui_color(withHexString: "#26AAFE")!

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class MSDImageView {
-    static func imageName(_ name: String) -> UIImageView {
+public class MSDImageView {
+    public static func imageName(_ name: String) -> UIImageView {
         let view = UIImageView()
         view.image = UIImage(named: name)
         view.contentMode = .scaleAspectFit
         return view
     }
-    static func image(_ image: UIImage) -> UIImageView {
+    public static func image(_ image: UIImage) -> UIImageView {
         let view = UIImageView()
         view.image = image
         view.contentMode = .scaleAspectFit

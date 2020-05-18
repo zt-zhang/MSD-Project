@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 // Moya TargetType 复用
-protocol MSDBaseTargetType: TargetType {}
+public protocol MSDBaseTargetType: TargetType {}
 extension MSDBaseTargetType {
     var baseURL: URL {
         return URL(string: "http://61.145.108.146:22238")!
@@ -32,11 +32,11 @@ extension MSDBaseTargetType {
         return parameters
     }
 }
-protocol MSDGitTrgetType: MSDBaseTargetType {}
+public protocol MSDGitTrgetType: MSDBaseTargetType {}
 extension MSDGitTrgetType {
     var method: Moya.Method {.get}
 }
-protocol MSDPostTrgetType: MSDBaseTargetType {}
+public protocol MSDPostTrgetType: MSDBaseTargetType {}
 extension MSDPostTrgetType {
     var method: Moya.Method {.post}
 }

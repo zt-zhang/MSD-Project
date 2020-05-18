@@ -11,7 +11,7 @@ import KakaJSON
 import Moya
 
 // KakaJSON 键值转换
-protocol MSDUnderlineCased {}
+public protocol MSDUnderlineCased {}
 extension MSDUnderlineCased {
     func kj_modelKey(from property: Property) -> ModelPropertyKey {
         property.name.kj.underlineCased()
@@ -19,7 +19,7 @@ extension MSDUnderlineCased {
 }
 
 // 在TargetType中进行网络数据转模型（可选）
-protocol MSDTargetTypeLink {
+public protocol MSDTargetTypeLink {
     associatedtype LinkResult
     var map: (Response) -> LinkResult {get}
 }

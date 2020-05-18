@@ -9,7 +9,7 @@
 import UIKit
 
 /// 编辑中显示提示条
-class MSDBarTextField: MSDDefaultTextField {
+public class MSDBarTextField: MSDDefaultTextField {
     lazy var bar: UIView = {
         let view = UIView()
         view.alpha = 0
@@ -23,7 +23,7 @@ class MSDBarTextField: MSDDefaultTextField {
         self.initView()
     }
     
-    override func initView() {
+    public override func initView() {
         self.addSubview(bar)
         
         bar.snp.makeConstraints { (make) in

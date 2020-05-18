@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MSDBaseView: UIView {
+open class MSDBaseView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,7 +16,7 @@ class MSDBaseView: UIView {
         self.layoutView()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

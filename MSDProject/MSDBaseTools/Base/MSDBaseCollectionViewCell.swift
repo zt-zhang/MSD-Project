@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MSDBaseCollectionViewCell: UICollectionViewCell {
+open class MSDBaseCollectionViewCell: UICollectionViewCell {
     var disposeBag = DisposeBag()
     
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
@@ -20,7 +20,7 @@ class MSDBaseCollectionViewCell: UICollectionViewCell {
         self.initView()
         self.layoutView()
     }
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

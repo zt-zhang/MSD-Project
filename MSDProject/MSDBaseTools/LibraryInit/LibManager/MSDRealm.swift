@@ -10,12 +10,12 @@ import Foundation
 import RealmSwift
 import SwiftyUserDefaults
 
-class MSDRealm {
+public class MSDRealm {
     static let shared = MSDRealm()
     private var realm:Realm = try! Realm()
     
     //MARK: 数据库配置、版本升级
-    static func initLib(_ ver: UInt64) {
+    public static func initLib(_ ver: UInt64) {
         let dbVersion : UInt64 = ver
         let docPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] as String
         let dbPath = docPath.appending("/msd_db.realm")

@@ -60,7 +60,7 @@ enum MSDWebLoadType{
     case POST(url:String,parameters: [String:Any])
 }
 
-protocol MSDWebViewDelegate:class {
+public protocol MSDWebViewDelegate:class {
     
     /// 服务器开始请求的时候调用
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)

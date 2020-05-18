@@ -31,7 +31,7 @@ func msd_str(_ key: String, _ comment: String) -> String {
 }
 
 //MARK: Log
-class MSDLog {
+public class MSDLog {
     /// 日志记录
     func info(_ str: String) {
         DDLogInfo(str)

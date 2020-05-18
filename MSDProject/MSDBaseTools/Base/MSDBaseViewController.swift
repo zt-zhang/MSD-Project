@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MSDBaseViewController: UIViewController {
+open class MSDBaseViewController: UIViewController {
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.initController()
@@ -18,7 +18,7 @@ class MSDBaseViewController: UIViewController {
         self.handleEvents()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(naviBarHidden(), animated: true)
     }

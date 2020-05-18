@@ -9,7 +9,7 @@
 import UIKit
 
 /// 左侧带图标
-class MSDDefaultTextField: QMUITextField {
+public class MSDDefaultTextField: QMUITextField {
     convenience init(placeholder: String, image: String? = nil) {
         self.init()
         self.placeholder = placeholder

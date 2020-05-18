@@ -19,7 +19,7 @@ extension UIBarButtonItem {
     /// - parameter action:   action
     ///
     /// - returns: UIBarButtonItem
-    convenience init(title: String?,image:String?,imageH:String? ,target: AnyObject?, action: Selector) {
+    public convenience init(title: String?,image:String?,imageH:String? ,target: AnyObject?, action: Selector) {
         
         let backItemImage = UIImage.init(named: image ?? "")
         let backItemHlImage = UIImage.init(named: imageH ?? "")

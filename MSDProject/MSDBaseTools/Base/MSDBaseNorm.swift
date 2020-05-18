@@ -6,7 +6,7 @@
 //  Copyright © 2020 zhangtian. All rights reserved.
 //
 
-protocol MSDViewControllerNorm {
+public protocol MSDViewControllerNorm {
     /// 修改控制器导航栏，颜色等
     func initController()
     ///添加UI组件
@@ -17,11 +17,11 @@ protocol MSDViewControllerNorm {
     func naviBarHidden() -> Bool
 }
 extension MSDViewControllerNorm {
-    func naviBarHidden() -> Bool {false}
+    public func naviBarHidden() -> Bool {false}
 }
 
 
-protocol MSDViewNorm  {
+public protocol MSDViewNorm  {
     ///添加UI组件
     func initView()
     ///布局组件
@@ -30,7 +30,7 @@ protocol MSDViewNorm  {
     func setView(data: Any?)
 }
 
-protocol MSDSwitchStyleNorm {
+public protocol MSDSwitchStyleNorm {
     ///枚举类型
     associatedtype T
     ///根据枚举值更新UI样式

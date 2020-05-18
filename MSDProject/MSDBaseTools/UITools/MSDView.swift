@@ -8,8 +8,8 @@
 
 import UIKit
 
-class MSDView {
-    static func color(_ color: UIColor) -> UIView {
+public class MSDView {
+    public static func color(_ color: UIColor) -> UIView {
         let view = UIView()
         view.backgroundColor = color
         return view

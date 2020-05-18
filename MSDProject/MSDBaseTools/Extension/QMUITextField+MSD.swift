@@ -11,7 +11,7 @@ import UIKit
 extension QMUITextField {
 
     /// 右侧明文/暗文切换
-    func setSecureEntry(btn: MSDRadioButton) {
+    public func setSecureEntry(btn: MSDRadioButton) {
         self.addSubview(btn)
         
         btn.snp.makeConstraints { (make) in

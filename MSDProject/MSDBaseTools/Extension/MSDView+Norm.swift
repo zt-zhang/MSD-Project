@@ -9,15 +9,15 @@
 import UIKit
 
 extension UIView: MSDViewNorm {
-    @objc func initView() {
+    @objc open func initView() {
         
     }
     
-    @objc func layoutView() {
+    @objc open func layoutView() {
         
     }
 
-    @objc func setView(data: Any?) {
+    @objc open func setView(data: Any?) {
         
     }
 }

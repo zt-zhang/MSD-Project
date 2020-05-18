@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MSDBaseNavigationController: UINavigationController {
+open class MSDBaseNavigationController: UINavigationController {
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
     }

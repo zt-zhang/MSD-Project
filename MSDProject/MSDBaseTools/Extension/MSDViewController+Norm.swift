@@ -9,15 +9,15 @@
 import UIKit
 
 extension UIViewController: MSDViewControllerNorm {
-    @objc func initController() {
+    @objc open func initController() {
         
     }
     
-    @objc func initView() {
+    @objc open func initView() {
         
     }
     
-    @objc func handleEvents() {
+    @objc open func handleEvents() {
         
     }
 }

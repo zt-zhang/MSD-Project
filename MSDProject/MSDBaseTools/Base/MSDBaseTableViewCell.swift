@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MSDBaseTableViewCell: UITableViewCell {
+open class MSDBaseTableViewCell: UITableViewCell {
     var disposeBag = DisposeBag()
     
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
@@ -23,7 +23,7 @@ class MSDBaseTableViewCell: UITableViewCell {
         self.layoutView()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
