@@ -7,7 +7,7 @@ target 'MSDProject' do
   pod 'SnapKit'#布局
   pod 'IQKeyboardManagerSwift'#键盘管理
   pod 'QMUIKit'#通用组件
-  pod 'swiftScan', :git => 'https://github.com/MxABC/swiftScan.git'#二维码
+  #pod 'swiftScan', :git => 'https://github.com/MxABC/swiftScan.git'#二维码
   pod 'TYPagerController'#标签页
   pod 'FSPagerView'#轮播
   pod 'Kingfisher'#网络图片加载

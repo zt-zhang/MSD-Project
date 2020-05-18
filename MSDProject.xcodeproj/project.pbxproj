@@ -52,6 +52,13 @@
 		BC53A12C246FE1B7000FEE2A /* WKJSPOST.html in Resources */ = {isa = PBXBuildFile; fileRef = BC53A12A246FE1B7000FEE2A /* WKJSPOST.html */; };
 		BC53A131246FE242000FEE2A /* String+MSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53A12E246FE241000FEE2A /* String+MSD.swift */; };
 		BC53A132246FE242000FEE2A /* UIBarButtonItem+MSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53A12F246FE242000FEE2A /* UIBarButtonItem+MSD.swift */; };
+		BC558228247223360097F6E5 /* LBXScanViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC558221247223360097F6E5 /* LBXScanViewStyle.swift */; };
+		BC558229247223360097F6E5 /* LBXScanWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC558222247223360097F6E5 /* LBXScanWrapper.swift */; };
+		BC55822A247223360097F6E5 /* LBXScanLineAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC558223247223360097F6E5 /* LBXScanLineAnimation.swift */; };
+		BC55822B247223360097F6E5 /* LBXPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC558224247223360097F6E5 /* LBXPermissions.swift */; };
+		BC55822C247223360097F6E5 /* LBXScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC558225247223360097F6E5 /* LBXScanView.swift */; };
+		BC55822D247223360097F6E5 /* LBXScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC558226247223360097F6E5 /* LBXScanNetAnimation.swift */; };
+		BC55822E247223360097F6E5 /* LBXScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC558227247223360097F6E5 /* LBXScanViewController.swift */; };
 		ED20E5012A60FFA3CF2516EA /* Pods_MSDProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C8EE483854B9A1569912D /* Pods_MSDProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +112,13 @@
 		BC53A12A246FE1B7000FEE2A /* WKJSPOST.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WKJSPOST.html; sourceTree = "<group>"; };
 		BC53A12E246FE241000FEE2A /* String+MSD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MSD.swift"; sourceTree = "<group>"; };
 		BC53A12F246FE242000FEE2A /* UIBarButtonItem+MSD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+MSD.swift"; sourceTree = "<group>"; };
+		BC558221247223360097F6E5 /* LBXScanViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewStyle.swift; sourceTree = "<group>"; };
+		BC558222247223360097F6E5 /* LBXScanWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanWrapper.swift; sourceTree = "<group>"; };
+		BC558223247223360097F6E5 /* LBXScanLineAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanLineAnimation.swift; sourceTree = "<group>"; };
+		BC558224247223360097F6E5 /* LBXPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXPermissions.swift; sourceTree = "<group>"; };
+		BC558225247223360097F6E5 /* LBXScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanView.swift; sourceTree = "<group>"; };
+		BC558226247223360097F6E5 /* LBXScanNetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanNetAnimation.swift; sourceTree = "<group>"; };
+		BC558227247223360097F6E5 /* LBXScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewController.swift; sourceTree = "<group>"; };
 		F59647B387E229B3D9A7ADBC /* Pods-MSDProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDProject.release.xcconfig"; path = "Target Support Files/Pods-MSDProject/Pods-MSDProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,8 +250,8 @@
 		BC53A0D1246E6DB6000FEE2A /* LibraryInit */ = {
 			isa = PBXGroup;
 			children = (
-				BC53A11A246FBFFB000FEE2A /* MSDRealm.swift */,
-				BC53A0F7246E7869000FEE2A /* MSDLibrary.swift */,
+				BC5581FD247222670097F6E5 /* Lib */,
+				BC5581FC247222580097F6E5 /* LibManager */,
 			);
 			path = LibraryInit;
 			sourceTree = "<group>";
@@ -294,6 +308,37 @@
 				BC53A127246FE1AE000FEE2A /* MSDWebViewConfig.swift */,
 			);
 			path = WKWebView;
+			sourceTree = "<group>";
+		};
+		BC5581FC247222580097F6E5 /* LibManager */ = {
+			isa = PBXGroup;
+			children = (
+				BC53A11A246FBFFB000FEE2A /* MSDRealm.swift */,
+				BC53A0F7246E7869000FEE2A /* MSDLibrary.swift */,
+			);
+			path = LibManager;
+			sourceTree = "<group>";
+		};
+		BC5581FD247222670097F6E5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				BC5582202472232C0097F6E5 /* swiftScan */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		BC5582202472232C0097F6E5 /* swiftScan */ = {
+			isa = PBXGroup;
+			children = (
+				BC558224247223360097F6E5 /* LBXPermissions.swift */,
+				BC558223247223360097F6E5 /* LBXScanLineAnimation.swift */,
+				BC558226247223360097F6E5 /* LBXScanNetAnimation.swift */,
+				BC558225247223360097F6E5 /* LBXScanView.swift */,
+				BC558227247223360097F6E5 /* LBXScanViewController.swift */,
+				BC558221247223360097F6E5 /* LBXScanViewStyle.swift */,
+				BC558222247223360097F6E5 /* LBXScanWrapper.swift */,
+			);
+			path = swiftScan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,10 +466,12 @@
 				BC53A0FA246E79CC000FEE2A /* MSDScanQRViewController.swift in Sources */,
 				BC53A09D246E3AD3000FEE2A /* ViewController.swift in Sources */,
 				BC53A0DD246E7072000FEE2A /* MSDBaseTableViewCell.swift in Sources */,
+				BC55822E247223360097F6E5 /* LBXScanViewController.swift in Sources */,
 				BC53A131246FE242000FEE2A /* String+MSD.swift in Sources */,
 				BC53A0E3246E763F000FEE2A /* MSDView+Norm.swift in Sources */,
 				BC53A11B246FBFFB000FEE2A /* MSDRealm.swift in Sources */,
 				BC53A099246E3AD3000FEE2A /* AppDelegate.swift in Sources */,
+				BC55822A247223360097F6E5 /* LBXScanLineAnimation.swift in Sources */,
 				BC53A105246E86BA000FEE2A /* MSDNetworkPlugin.swift in Sources */,
 				BC53A0F2246E77FB000FEE2A /* MSDButton.swift in Sources */,
 				BC53A0D7246E700E000FEE2A /* MSDBaseNavigationController.swift in Sources */,
@@ -441,14 +488,19 @@
 				BC53A10A246E8D6C000FEE2A /* UIView+MSD.swift in Sources */,
 				BC53A0F4246E7806000FEE2A /* MSDLabel.swift in Sources */,
 				BC53A111246F7CD2000FEE2A /* UIButton+MSD.swift in Sources */,
+				BC55822B247223360097F6E5 /* LBXPermissions.swift in Sources */,
 				BC53A0EA246E77A9000FEE2A /* MSDColor.swift in Sources */,
+				BC55822C247223360097F6E5 /* LBXScanView.swift in Sources */,
+				BC55822D247223360097F6E5 /* LBXScanNetAnimation.swift in Sources */,
 				BC53A0D3246E6FAB000FEE2A /* MSDGlobal.swift in Sources */,
 				BC53A0FF246E854B000FEE2A /* MSDNetWork.swift in Sources */,
 				BC53A0F6246E7837000FEE2A /* MSDTextField.swift in Sources */,
 				BC53A0DB246E7057000FEE2A /* MSDBaseView.swift in Sources */,
+				BC558228247223360097F6E5 /* LBXScanViewStyle.swift in Sources */,
 				BC53A0E8246E77A0000FEE2A /* MSDFont.swift in Sources */,
 				BC53A0DF246E708D000FEE2A /* MSDBaseCollectionViewCell.swift in Sources */,
 				BC53A0F8246E7869000FEE2A /* MSDLibrary.swift in Sources */,
+				BC558229247223360097F6E5 /* LBXScanWrapper.swift in Sources */,
 				BC53A113246F7E20000FEE2A /* MSDRadioButton.swift in Sources */,
 				BC53A0D9246E7048000FEE2A /* MSDBaseTabBarController.swift in Sources */,
 				BC53A11D246FD45B000FEE2A /* MSDVersion.swift in Sources */,

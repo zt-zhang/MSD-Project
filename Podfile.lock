@@ -340,10 +340,6 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SnapKit (4.2.0)
-  - SQLite.swift (0.12.2):
-    - SQLite.swift/standard (= 0.12.2)
-  - SQLite.swift/standard (0.12.2)
-  - swiftScan (1.2.0)
   - SwiftyUserDefaults (5.0.0)
   - TYPagerController (2.1.2)
 
@@ -362,8 +358,6 @@ DEPENDENCIES:
   - RxDataSources
   - RxSwift
   - SnapKit
-  - SQLite.swift
-  - swiftScan (from `https://github.com/MxABC/swiftScan.git`)
   - SwiftyUserDefaults
   - TYPagerController
 
@@ -388,18 +382,8 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
-    - SQLite.swift
     - SwiftyUserDefaults
     - TYPagerController
-
-EXTERNAL SOURCES:
-  swiftScan:
-    :git: https://github.com/MxABC/swiftScan.git
-
-CHECKOUT OPTIONS:
-  swiftScan:
-    :commit: fd652ea645b29841f5990ed1583ce6038f190e56
-    :git: https://github.com/MxABC/swiftScan.git
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -421,11 +405,9 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
-  swiftScan: d7f91607b1a47cc04e6eb654c2c01e2e940e337d
   SwiftyUserDefaults: 33fcb42bd1feb53a37d873feb62c82967db5f7f6
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
 
-PODFILE CHECKSUM: f386d63838274b1690986b6654e224c039a96ce9
+PODFILE CHECKSUM: 1a47277104f7e4de7c9661223f91567f9f079079
 
 COCOAPODS: 1.9.1
