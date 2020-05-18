@@ -8,26 +8,29 @@
 
 import UIKit
 
-class MSDScanQRViewController: LBXScanViewController {
+public class MSDScanQRViewController: LBXScanViewController {
     var barTitle: String?
     
     var resultBlock: ((String) ->Void)?
     
-    convenience init(title: String, result:@escaping (String)->Void) {
+    public convenience init(title: String, result:@escaping (String)->Void) {
         self.init()
         self.barTitle = title
         self.resultBlock = result
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.initController()
     }
     
-    override func initController() {
+    public override func initController() {
         self.title = barTitle
         let btn = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(openPhotoAlbum))
         self.navigationItem.rightBarButtonItem = btn
+        
+        self.navigationController?.navigationBar.isTranslucent = false
+        print("沙雕")
         
         var style = LBXScanViewStyle()
         style.animationImage = UIImage(named: "CodeScan.bundle/qrcode_scan_light_green")
@@ -38,11 +41,12 @@ class MSDScanQRViewController: LBXScanViewController {
         setNeedCodeImage(needCodeImg: true)
     }
     
-    override func handleCodeResult(arrayResult: [LBXScanResult]) {
+    public override func handleCodeResult(arrayResult: [LBXScanResult]) {
         for result: LBXScanResult in arrayResult {
             if let str = result.strScanned {
                 if let result = resultBlock {
                     result(str)
+                    self.navigationController?.popViewController(animated: true)
                 }
             }
         }

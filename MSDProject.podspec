@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
   s.resources = ["MSDProject/MSDBaseTools/Resource/*.bundle"]
   s.framework    = "UIKit","Foundation"
   s.requires_arc = true
+  s.pod_target_xcconfig = {'GCC_WARN_ABOUT_RETURN_TYPE' => 'YES_ERROR'}
 
   # UI相关
   s.dependency 'SnapKit'
